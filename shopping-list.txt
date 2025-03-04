@@ -1,0 +1,33 @@
+chicken stock: 350.0 ml
+cereal: 210.0 g
+semi-skimmed milk: 393.75 ml
+margarine: 40.0 g
+cajun seasoning: 1.0 tbsp
+onion: 1.75 
+mince beef: 225.0 g
+flour: 6.25 g
+spaghetti: 137.5 g
+bread: 8.0 slices
+satchet schwartz chilli con carne: 0.5 
+can plum tomato: 400.0 g
+cheddar slice: 6.0 
+whole milk: 875.0 ml
+chorizo: 75.0 g
+chicken breasts: 2.0 
+macaroni: 75.0 g
+crisp packet: 4.0 
+olive oil: 2.25 tbsp
+satchet schwartz beef stroganoff: 0.75 
+butter: 7.5 g
+garlic granules: 1.0 tbsp
+thin lean steak: 337.5 g
+milk: 125.0 ml
+long grain rice: 250.0 g
+mushrooms: 75.0 g
+can chopped tomatoes: 0.5 
+satchet schwartz carbonara: 0.5 
+can red kidney beans: 200.0 g
+bacon: 150.0 g
+red pepper: 1.0 
+mature cheddar: 50.0 g
+lean on bone ham: 4.0 

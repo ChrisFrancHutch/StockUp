@@ -1,0 +1,38 @@
+Week 1:
+Monday: Breakfast: Cereal(1) | Lunch: Ham & Cheese Sandwich(1) | Dinner: Chicken & Chorizo Jambalaya(4)
+Tuesday: Breakfast: Cereal(1) | Lunch: Leftover Chicken & Chorizo Jambalaya | Dinner: Eating Out
+Wednesday: Breakfast: Cereal(1) | Lunch: Mac & Cheese(1) | Dinner: Chilli Con Carne(2)
+Thursday: Breakfast: Cereal(1) | Lunch: Ham & Cheese Sandwich(1) | Dinner: Beef Stroganoff(3)
+Friday: Breakfast: Cereal(1) | Lunch: Leftover Beef Stroganoff | Dinner: N/A
+Saturday: Breakfast: Cereal(1) | Lunch: Ham & Cheese Sandwich(1) | Dinner: Carbonara(2)
+Sunday: Breakfast: Cereal(1) | Lunch: Ham & Cheese Sandwich(1) | Dinner: N/A
+
+
+Week 2:
+Monday: Breakfast: Cereal(1) | Lunch: Ham & Cheese Sandwich(1) | Dinner: Steak(2)
+Tuesday: Breakfast: Cereal(1) | Lunch: Mac & Cheese(1) | Dinner: Eating Out
+Wednesday: Breakfast: Cereal(1) | Lunch: Ham & Cheese Sandwich(1) | Dinner: Pork Schnitzels(3)
+Thursday: Breakfast: Cereal(1) | Lunch: Leftover Pork Schnitzels | Dinner: Paella(3)
+Friday: Breakfast: Cereal(1) | Lunch: Ham & Cheese Sandwich(1) | Dinner: N/A
+Saturday: Breakfast: Cereal(1) | Lunch: Leftover Paella | Dinner: Bangers & Mash(2)
+Sunday: Breakfast: Cereal(1) | Lunch: Ham & Cheese Sandwich(1) | Dinner: N/A
+
+
+Week 3:
+Monday: Breakfast: Cereal(1) | Lunch: Ham & Cheese Sandwich(1) | Dinner: Carbonara(2)
+Tuesday: Breakfast: Cereal(1) | Lunch: Ham & Cheese Sandwich(1) | Dinner: Eating Out
+Wednesday: Breakfast: Cereal(1) | Lunch: Mac & Cheese(1) | Dinner: Beef Stroganoff(3)
+Thursday: Breakfast: Cereal(1) | Lunch: Ham & Cheese Sandwich(1) | Dinner: Chilli Con Carne(3)
+Friday: Breakfast: Cereal(1) | Lunch: Leftover Beef Stroganoff | Dinner: N/A
+Saturday: Breakfast: Cereal(1) | Lunch: Leftover Chilli Con Carne | Dinner: Chicken & Chorizo Jambalaya(4)
+Sunday: Breakfast: Cereal(1) | Lunch: Ham & Cheese Sandwich(1) | Dinner: N/A
+
+
+Week 4:
+Monday: Breakfast: Cereal(1) | Lunch: Ham & Cheese Sandwich(1) | Dinner: Bangers & Mash(2)
+Tuesday: Breakfast: Cereal(1) | Lunch: Mac & Cheese(1) | Dinner: Eating Out
+Wednesday: Breakfast: Cereal(1) | Lunch: Ham & Cheese Sandwich(1) | Dinner: Paella(3)
+Thursday: Breakfast: Cereal(1) | Lunch: Leftover Paella | Dinner: Pork Schnitzels(3)
+Friday: Breakfast: Cereal(1) | Lunch: Leftover Pork Schnitzels | Dinner: N/A
+Saturday: Breakfast: Cereal(1) | Lunch: Ham & Cheese Sandwich(1) | Dinner: Steak(2)
+Sunday: Breakfast: Cereal(1) | Lunch: Ham & Cheese Sandwich(1) | Dinner: N/A
