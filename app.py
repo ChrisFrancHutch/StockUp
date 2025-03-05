@@ -18,6 +18,12 @@ def user_input_for_menus(number_of_options):
 def clear_terminal():
     os.system('cls' if os.name == 'nt' else 'clear')
 
+def start_program():
+    if not os.path.isfile("stock-up.db"):
+        DatabaseCreation().initialize_db(ParseFile().parse_recipe_text_file())
+
+    navigate_main_menu()
+
 
 def navigate_final_menu(previous_menu):
     print("\n-----------------")
@@ -51,9 +57,6 @@ def navigate_main_menu():
 
         case 4:
             navigate_database_settings_menu()
-
-        case _:
-            navigate_main_menu()
 
 def navigate_view_data_menu():
     clear_terminal()
@@ -111,6 +114,8 @@ def use_generate_shopping_list():
         navigate_main_menu()
 
     FileManipulation().write_shopping_list_text_file(DatabaseManipulation().fetch_additional_ingredients_for_meal_list(FileManipulation().generate_weekly_meal_plan(selected_week)))
+
+    print(f"INFO: Shopping list for week {selected_week} has been sent to shopping-list.txt file!")
     
     navigate_final_menu(use_generate_shopping_list)
 
@@ -136,7 +141,7 @@ def use_view_weekly_meal_plan():
     clear_terminal()
 
     if 0 < selected_week <= len(weekly_meal_plan.keys()):
-        print(f"\n|--- Meal plan for {list(weekly_meal_plan.keys())[selected_week + 1]} ---|\n")
+        print(f"\n|--- Meal plan for {list(weekly_meal_plan.keys())[selected_week - 1]} ---|\n")
 
         for day, day_meals in weekly_meal_plan[f"Week {selected_week}"].items():
             for mealTime, meal in day_meals.items():
@@ -266,34 +271,38 @@ def edit_recipe_text_file(operator):
                     if new_ingredient != "":
                         break
         
-                except Exception as e:
-                    print(f"Error: {e}")
+                except:
+                    print(f"ERROR: An error has occured, ingredient addition has been cancelled")
+
 
             FileManipulation().add_to_recipe_text_file(recipe_name, portions, ingredients)
 
             print(f"\nINFO: {recipe_name} added to recipes text file!")
 
-            navigate_final_menu(navigate_edit_recipe_menu)
+            DatabaseCreation().initialize_db()
 
         case '-':
             print("|--- Remove Recipes Menu ---|\n")
             recipes = ParseFile().parse_recipe_text_file()
-            for index, recipe in list(recipes.keys()):
-                print(f"{index}: {recipe}")
+            for index, recipe in enumerate(list(recipes.keys())):
+                print(f"{index + 1}: {recipe}")
 
-                final_option_number = index + 1
+                final_option_number = index + 2
 
             print(f"\n{final_option_number}: Previous Menu")
 
             selected_recipe_index = user_input_for_menus(final_option_number)
 
-            if selected_recipe_index == final_option_number():
+            if selected_recipe_index == final_option_number:
                 navigate_edit_recipe_menu()
-                
-            FileManipulation().delete_recipe_from_recipe_file(recipes[selected_recipe_index - 1])
-            print(f"\nINFO: {recipe_name} has been removed from the recipes text file!")
 
-            navigate_final_menu(navigate_edit_recipe_menu)
+            DatabaseManipulation().delete_recipe(list(recipes.keys())[selected_recipe_index - 1])
+                
+            FileManipulation().delete_recipe_from_recipe_file(list(recipes.keys())[selected_recipe_index - 1])
+            
+            print(f"\nINFO: {recipe_name} has been removed from the recipes text file & database!")
+
+    navigate_final_menu(navigate_edit_recipe_menu)
 
 def navigate_edit_inventory_menu():
     clear_terminal()
@@ -344,6 +353,7 @@ def use_edit_inventory(operator):
         ingredient_list = DatabaseManipulation().fetch_all_inventory_ingredients()
         if len(ingredient_list) == 0:
             print("Empty Inventory!")
+            final_option_number = 1
 
     for index, ingredient in enumerate(ingredient_list):
         print(f"{index + 1}: {ingredient[0].capitalize()}")
@@ -469,7 +479,7 @@ def use_edit_ingredient_price():
 
     while True:
         try:
-            new_price = float(input(f"What is the price of 1 {ingredient_unit} of {ingredient_name}: "))
+            new_price = float(input(f"What is the price of 1 {ingredient_unit} of {ingredient_name} in pence: "))
             break
 
         except:
@@ -531,5 +541,4 @@ def use_reset_recipes():
 
     navigate_final_menu(navigate_database_settings_menu)
 
-DatabaseCreation().initialize_db(ParseFile().parse_recipe_text_file())
-navigate_main_menu()
+navigate_edit_recipe_menu()

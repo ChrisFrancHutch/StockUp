@@ -128,7 +128,7 @@ class FileManipulation:
         recipe_name = recipe_name.lower()
 
         for ingredient in ingredients:
-            ingredient[0] = ingredient[0].lower()
+            ingredient[2] = ingredient[2].lower()
 
         recipe_data = ParseFile().parse_recipe_text_file()
 

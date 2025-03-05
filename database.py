@@ -4,7 +4,7 @@ import os
 
 class DatabaseCreation:
     def __init__(self):
-        self.db_path = "food-management.db"
+        self.db_path = "stock-up.db"
 
     def _connect_to_db(self):
         return sqlite3.connect(self.db_path)
@@ -90,7 +90,7 @@ class DatabaseCreation:
 
 class DatabaseManipulation:
     def __init__(self):
-        self.db_path = "food-management.db"
+        self.db_path = "stock-up.db"
 
     def _connect_to_db(self):
         return sqlite3.connect(self.db_path)
@@ -325,6 +325,17 @@ class DatabaseManipulation:
                     ingredients_total_price += ((ingredient[0] * PPU) / portions)
         
         return ingredients_total_price
+    
+    def delete_recipe(self, recipe):
+        recipe = recipe.lower()
+
+        with self._connect_to_db() as connection:
+            cursor = connection.cursor()
+
+            cursor.execute("""
+                           DELETE FROM recipes
+                           WHERE meal_name = ?
+                           """, (recipe,))
 
     def reset_food_database(self, recipe_text_data):
         os.remove(self.db_path)
