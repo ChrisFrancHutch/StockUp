@@ -39,10 +39,10 @@ These features have been coded through a series of complex data structures and d
 
 ## Technology Stack
 
-<center>
+<p align="center">
     <img src="logo_python.png" alt="Python Logo" width="150"/>
     <img src="logo_sql.png" alt="SQL Logo" width="150"/>
-</center>
+</p>
 
 ## Installation
 
