@@ -541,4 +541,4 @@ def use_reset_recipes():
 
     navigate_final_menu(navigate_database_settings_menu)
 
-navigate_edit_recipe_menu()
+start_program()
